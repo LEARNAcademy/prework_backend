@@ -1,24 +1,12 @@
-# README
+# LEARN Prework Application API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+Base setup with Devise
 
-* System dependencies
+#### Schema
+rails g resource CodeModule lesson:string progress:string completed:boolean user_id:integer
 
-* Configuration
+rails g resource Lesson content:text question:string completed:boolean code_module_id:integer
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+rails g resource Question content:text answer:text correct:boolean completed:boolean resources:text lesson_id:integer

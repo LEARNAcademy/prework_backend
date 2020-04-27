@@ -1,0 +1,2 @@
+class CodeModule < ApplicationRecord
+end
