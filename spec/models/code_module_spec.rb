@@ -19,4 +19,16 @@ RSpec.describe CodeModule, type: :model do
   it "must have a user" do
     expect(codemodule.errors[:user_id]).to_not be_empty
   end
+
+  # Validation for boolean
+  it "Completed must be true or false" do
+    codemoduleCompleteness = CodeModule.create completed:true
+    expect(codemoduleCompleteness[:completed]).to be_in([true, false])
+  end
+
+  # Validations for strings
+  it "Lesson must be a string" do
+    codemoduleString = CodeModule.create lesson: "string"
+    expect(codemoduleString[:lesson]).to be_a(String)
+  end
 end
