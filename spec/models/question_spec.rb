@@ -27,5 +27,17 @@ RSpec.describe Question, type: :model do
   it "must be attached to a lesson identifier" do
     expect(questioncreate.errors[:lesson_id]).to_not be_empty
   end
+
+  #Boolean tests
+
+  it "must have correct be a boolean value" do
+    questioncorrect = Question.create correct:true
+    expect(questioncorrect[:correct]).to be_in([true, false])
+  end
+
+  it "must have completed be a boolean value" do
+    questionComplete = Question.create completed:true
+    expect(questionComplete[:completed]).to be_in([true, false])
+  end
   
 end
