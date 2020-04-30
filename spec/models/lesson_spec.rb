@@ -47,10 +47,8 @@ RSpec.describe Lesson, type: :model do
   end
 
   # Validations for uniquness
-  # it "Title must not be the same as another" do
-  #   lessonString = Lesson.create title: "something unique"
-  #   { is_expected.to validate_uniqueness_of :title }
-  # end
+  
+  it { should validate_uniqueness_of(:title).ignoring_case_sensitivity }
 
 
 

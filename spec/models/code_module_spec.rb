@@ -29,4 +29,14 @@ RSpec.describe CodeModule, type: :model do
     expect(codemoduleString[:lesson]).to be_a(String)
   end
   
+  # Validation for integer
+  it "User id must be a number" do
+    codemoduleInteger = CodeModule.create user_id:1
+    expect(codemoduleInteger[:user_id]).to be_a(Integer)
+  end
+
+  # Validates uniqueness
+  
+    it { should validate_uniqueness_of(:lesson).ignoring_case_sensitivity}
+
 end
