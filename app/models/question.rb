@@ -6,4 +6,7 @@ class Question < ApplicationRecord
 
     #Presence validations
     validates :content, :answer, :correct, :completed, :resources, :lesson_id, presence: true 
+
+    #Intger validation
+    validates :lesson_id, numericality: true
 end

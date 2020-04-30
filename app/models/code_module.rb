@@ -4,7 +4,13 @@ class CodeModule < ApplicationRecord
     has_many :lessons
     has_many :questions, through: :lessons
     
-    #Validations below.
-    validates :lesson, :progress, :completed, :user_id, presence: true
+    #Validations for presence below.
+    validates :lesson, :progress, :user_id, presence: true
+
+    #Integer validations
+    validates :user_id, numericality: true
+
+    #Length validations
+    validates :lesson, length: { minimum: 3}
 
 end

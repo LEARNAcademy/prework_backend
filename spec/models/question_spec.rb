@@ -39,5 +39,19 @@ RSpec.describe Question, type: :model do
     questionComplete = Question.create completed:true
     expect(questionComplete[:completed]).to be_in([true, false])
   end
+
+  #Tests for integer.
+  it {should validate_numericality_of(:lesson_id)}
   
+end
+
+#Relational model testing
+RSpec.describe Question, type: :model do
+
+  it {should belong_to(:lesson)}
+
+  it {should belong_to(:code_module)}
+
+  it {should have_many(:resources)}
+
 end
