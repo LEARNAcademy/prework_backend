@@ -8,8 +8,6 @@ class CodeModule < ApplicationRecord
     validates :lesson, :completed, :user_id, presence: true
     # Validates boolean
     validates :completed, inclusion: [true, false]
-    # Validates string
-    validates :lesson, format: {with: /[a-zA-Z]/}
-    validates :progress, format: {with: /[a-zA-Z]/}
+
 
 end
