@@ -4,7 +4,7 @@ class Lesson < ApplicationRecord
     has_many :questions
     
     # Validation for prescence.
-    validates :content, :question, :completed, :code_module_id, :title, presence: true
+    validates :content, :question, :code_module_id, :title, presence: true
 
     # Validation for uniqueness
     validates :title, uniqueness: { case_sensitive: false }
