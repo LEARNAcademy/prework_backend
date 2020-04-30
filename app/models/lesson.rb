@@ -8,4 +8,10 @@ class Lesson < ApplicationRecord
 
     # Validation for uniqueness
     validates :title, uniqueness: { case_sensitive: false }
+
+    #Validation for length
+    validates :title, length: { minimum: 3}
+
+    #Validation for integer
+    validates :code_module_id, numericality: true
 end

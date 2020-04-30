@@ -7,6 +7,11 @@ class Question < ApplicationRecord
     #Presence validations
     validates :content, :answer, :correct, :completed, :resources, :lesson_id, presence: true 
 
-    #Intger validation
+    #Integer validation
     validates :lesson_id, numericality: true
+    validates :code_module_id, numericality: true
+
+    #Length of validations
+    validates :content, length: {minimum: 3} 
+    validates :answer, length: {minimum: 3} 
 end
