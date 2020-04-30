@@ -6,4 +6,7 @@ class Lesson < ApplicationRecord
     #Validation below.
     validates :content, :question, :completed, :code_module_id, :title, presence: true
 
+    # Validates string
+    validates :question, format: {with: /[a-zA-Z]/}
+    validates :title, format: {with: /[a-zA-Z]/}
 end

@@ -8,9 +8,6 @@ RSpec.describe CodeModule, type: :model do
     expect(codemodule.errors[:lesson]).to_not be_empty
   end
 
-  it "must have a progress" do
-    expect(codemodule.errors[:progress]).to_not be_empty
-  end
 
   it "must have a completed boolean" do
     expect(codemodule.errors[:completed]).to_not be_empty
@@ -31,4 +28,5 @@ RSpec.describe CodeModule, type: :model do
     codemoduleString = CodeModule.create lesson: "string"
     expect(codemoduleString[:lesson]).to be_a(String)
   end
+  
 end
