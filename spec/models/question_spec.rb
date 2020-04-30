@@ -4,6 +4,16 @@ require 'rails_helper'
 questioncreate = Question.create
 
 RSpec.describe Question, type: :model do
+
+  #Relational model testing
+
+  it {should belong_to(:lesson)}
+
+  it {should belong_to(:code_module)}
+
+  it {should have_many(:resources)}
+
+  #Presence validation testing
   it "must have content" do
     expect(questioncreate.errors[:content]).to_not be_empty
   end
@@ -40,18 +50,19 @@ RSpec.describe Question, type: :model do
     expect(questionComplete[:completed]).to be_in([true, false])
   end
 
+  it {should allow_value(true).for(:correct)}
+
+  it {should allow_value(true).for(:completed)}
+
   #Tests for integer.
   it {should validate_numericality_of(:lesson_id)}
+
+  it {should validate_numericality_of(:code_module_id)}
+
+  #Tests for length
+  it {should validate_length_of(:content).is_at_least(3)}
+
+  it {should validate_length_of(:answer).is_at_least(3)}
   
-end
-
-#Relational model testing
-RSpec.describe Question, type: :model do
-
-  it {should belong_to(:lesson)}
-
-  it {should belong_to(:code_module)}
-
-  it {should have_many(:resources)}
-
+  
 end

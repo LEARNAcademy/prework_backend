@@ -7,8 +7,10 @@ resourceCreate = Resource.create
 resourceInt = Resource.create question_id:42
 
 RSpec.describe Resource, type: :model do
+   # Relational testing
+  it {should belong_to(:question)}
 
-  #Presence tests
+  # Presence tests
   it "must have a name" do
     expect(resourceCreate.errors[:name]).to_not be_empty
   end
@@ -21,7 +23,7 @@ RSpec.describe Resource, type: :model do
     expect(resourceCreate.errors[:question_id]).to_not be_empty
   end
 
-  #Validations for integer
+  # Validations for integer
 
   it "must be a numeric value for id" do
     expect(resourceInt[:question_id]).to be_a(Numeric)
@@ -34,19 +36,9 @@ RSpec.describe Resource, type: :model do
     expect(resourceInt.errors[:question_id]).to_not be_empty
   end
 
-#Length validations on string and text utilizing shoulda-matchers.
-#This test validates that the length of name is atleast 3 characters long.
-it {should validate_length_of(:name).is_at_least(3)}
+  #Length validation testing
+  it {should validate_length_of(:name).is_at_least(3)}
 
-#This test validates that the length of link is atleast 3 characters long.
-it {should validate_length_of(:link).is_at_least(3)}
-
-end
-
-# Relational testing
-
-RSpec.describe Resource, type: :model do
-  
-  it {should belong_to(:question)}
+  it {should validate_length_of(:link).is_at_least(3)}
 
 end
