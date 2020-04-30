@@ -3,40 +3,41 @@ codemodule = CodeModule.create
 
 RSpec.describe CodeModule, type: :model do
 
+  #Relational model tests
+  it { should belong_to(:user) }
+  
+  it { should have_many(:lessons)}
+
+  it {should have_many(:questions)}
+
   #Presence validation tests. 
   it "must have a lesson" do
     expect(codemodule.errors[:lesson]).to_not be_empty
   end
 
+  it "must have a progress" do
+    expect(codemodule.errors[:progress]).to_not be_empty
+  end
 
-  it "must have a completed boolean" do
-    expect(codemodule.errors[:completed]).to_not be_empty
+  it "must have a completed boolean value" do
+    expect(codemodule.errors[:completed]).to be_empty
   end
 
   it "must have a user" do
     expect(codemodule.errors[:user_id]).to_not be_empty
   end
 
-  # Validation for boolean
-  it "Completed must be true or false" do
-    codemoduleCompleteness = CodeModule.create completed:true
-    expect(codemoduleCompleteness[:completed]).to be_in([true, false])
-  end
+  #Tests for integer
 
-  # Validations for strings
-  it "Lesson must be a string" do
-    codemoduleString = CodeModule.create lesson: "string"
-    expect(codemoduleString[:lesson]).to be_a(String)
-  end
-  
-  # Validation for integer
-  it "User id must be a number" do
-    codemoduleInteger = CodeModule.create user_id:1
-    expect(codemoduleInteger[:user_id]).to be_a(Integer)
-  end
+  it{should validate_numericality_of(:user_id)}
 
-  # Validates uniqueness
-  
-    it { should validate_uniqueness_of(:lesson).ignoring_case_sensitivity}
+  #Tests for length of values
+
+  it{should validate_length_of(:lesson).is_at_least(3)}
+
+  #Tests boolean value
+
+  it {should allow_value(nil).for(:completed)}
+
 
 end

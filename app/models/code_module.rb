@@ -4,16 +4,13 @@ class CodeModule < ApplicationRecord
     has_many :lessons
     has_many :questions, through: :lessons
     
-    #Validations for prescence.
-    validates :lesson, :completed, :user_id, presence: true
-    
-    # Validates boolean
-    validates :completed, inclusion: [true, false]
+    #Validations for presence below.
+    validates :lesson, :progress, :user_id, presence: true
 
-    # Validates integer
-    validates :user_id, :numericality => {:only_integer => true}
+    #Integer validations
+    validates :user_id, numericality: true
 
-    # Validates uniuqeness
-    validates :lesson, uniqueness: { case_sensitive: false }
+    #Length validations
+    validates :lesson, length: { minimum: 3}
 
 end
