@@ -39,5 +39,7 @@ RSpec.describe Question, type: :model do
     questionComplete = Question.create completed:true
     expect(questionComplete[:completed]).to be_in([true, false])
   end
+
+                                
   
 end
