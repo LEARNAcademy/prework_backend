@@ -1,4 +1,6 @@
 require 'rails_helper'
+
+#Global variable for CodeModule.create
 codemodule = CodeModule.create
 
 RSpec.describe CodeModule, type: :model do

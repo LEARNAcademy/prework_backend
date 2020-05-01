@@ -61,11 +61,13 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  #Helpers for testing with Devise 
   config.include Devise::Test::IntegrationHelpers, type: :request
   config.include Devise::Test::ControllerHelpers, type: :controller
-  
+
 end
 
+ #Additiona gem for Shoulda-Matchers to be used with RSPEC. 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
