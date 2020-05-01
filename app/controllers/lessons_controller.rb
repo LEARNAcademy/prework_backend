@@ -1,4 +1,5 @@
 class LessonsController < ApplicationController
+
     # Method for all Lesson
     def index
         lessons = Lesson.all

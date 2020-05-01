@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+    
     # Method for all Questions
     def index
         questions = Question.all
