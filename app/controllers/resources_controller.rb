@@ -1,4 +1,5 @@
 class ResourcesController < ApplicationController
+    
     # Method for all Resources
     def index
         resources = Resource.all
