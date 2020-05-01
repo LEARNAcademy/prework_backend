@@ -19,7 +19,7 @@ RSpec.describe Lesson, type: :model do
   end
 
   it "must have a completed boolean" do
-    expect(lessonCreate.errors[:completed]).to_not be_empty
+    expect(lessonCreate.errors[:completed]).to be_empty
   end
 
   it "must have a module" do
