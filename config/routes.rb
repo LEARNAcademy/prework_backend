@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/modules' => 'code_modules#index'
   get '/lessons' => 'lessons#index'
   get '/questions' => 'questions#index'
+  get '/resources' => 'resources#index'
 end
