@@ -5,7 +5,7 @@ class CodeModule < ApplicationRecord
     has_many :questions, through: :lessons
     
     #Validations for presence below.
-    validates :lesson, :progress, :user_id, presence: true
+    validates :lesson, :user_id, presence: true
 
     #Integer validations
     validates :user_id, numericality: true
