@@ -7,7 +7,7 @@ class CodeModulesController < ApplicationController
             codeModules = CodeModule.all
             render json: codeModules 
         else
-            render status: 403, plain: "Please Sign In to Access"
+            render status: 403, plain: 'Please Sign In to Access'
         end
     end
     # Method for making a new CodeModule
