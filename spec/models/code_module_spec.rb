@@ -17,10 +17,6 @@ RSpec.describe CodeModule, type: :model do
     expect(codemodule.errors[:lesson]).to_not be_empty
   end
 
-  it "must have a progress" do
-    expect(codemodule.errors[:progress]).to_not be_empty
-  end
-
   it "must have a completed boolean value" do
     expect(codemodule.errors[:completed]).to be_empty
   end
