@@ -12,3 +12,5 @@ rails g resource Lesson content:text question:string completed:boolean code_modu
 rails g resource Question content:text answer:text correct:boolean completed:boolean resources:text lesson_id:integer
 
 rails g resource Resource name:string link:text question_id:integer
+
+rails g resource Topic title:string
