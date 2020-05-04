@@ -8,14 +8,16 @@ RSpec.describe Lesson, type: :model do
   it {should belong_to(:code_module)}
 
   it {should have_many(:questions)}
+
+  #Check if column exists
+  
+  it "must have a question" do
+    expect(lessonCreate.errors[:question]).to be_empty
+  end
   
   # Presence validation tests.  
   it "must have content" do
     expect(lessonCreate.errors[:content]).to_not be_empty
-  end
-
-  it "must have a question" do
-    expect(lessonCreate.errors[:question]).to_not be_empty
   end
 
   it "must have a completed boolean" do
