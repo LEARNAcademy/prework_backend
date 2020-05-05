@@ -27,17 +27,21 @@ RSpec.describe CodeModule, type: :model do
     expect(codemodule.errors[:user_id]).to_not be_empty
   end
 
-  #Tests for integer
+  it "must have a topic" do
+    expect(codemodule.errors[:topic_id]).to_not be_empty
+  end
 
+  #Tests for integer
   it{should validate_numericality_of(:user_id)}
 
   #Tests for length of values
-
   it{should validate_length_of(:lesson).is_at_least(3)}
 
   #Tests boolean value
-
   it {should allow_value(nil).for(:completed)}
+
+   # Validations for uniqueness tests
+   it { should validate_uniqueness_of(:lesson).ignoring_case_sensitivity }
 
 
 end

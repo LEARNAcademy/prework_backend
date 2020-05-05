@@ -3,16 +3,19 @@ require 'rails_helper'
 lessonCreate = Lesson.create
 
 RSpec.describe Lesson, type: :model do
-  #Relational model tests
 
+  #Relational model tests
   it {should belong_to(:code_module)}
 
   it {should have_many(:questions)}
 
   #Check if column exists
-  
   it "must have a question" do
     expect(lessonCreate.errors[:question]).to be_empty
+  end
+
+  it "can have an img_src" do
+    expect(lessonCreate.errors[:img_src]).to be_empty
   end
   
   # Presence validation tests.  
@@ -53,6 +56,7 @@ RSpec.describe Lesson, type: :model do
     lessonString = Lesson.create question: "string"
     expect(lessonString[:question]).to be_a(String)
   end
+  
   it "Title must be a string" do
     lessonString = Lesson.create title: "string"
     expect(lessonString[:title]).to be_a(String)
