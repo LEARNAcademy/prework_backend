@@ -7,10 +7,12 @@ RSpec.describe CodeModule, type: :model do
 
   #Relational model tests
   it { should belong_to(:user) }
-  
-  it { should have_many(:lessons)}
 
-  it {should have_many(:questions)}
+  it { should belong_to(:topic) }
+  
+  it { should have_many(:lessons) }
+
+  it { should have_many(:questions) }
 
   #Presence validation tests. 
   it "must have a lesson" do
