@@ -14,8 +14,8 @@ RSpec.describe Question, type: :model do
   it {should have_many(:resources)}
 
     #Check if column exists
-    it "can have an img_src" do
-      expect(questionCreate.errors[:img_src]).to be_empty
+  it "can have an img_src" do
+    expect(questionCreate.errors[:img_src]).to be_empty
     end
 
    #Test for optional columns
@@ -23,7 +23,11 @@ RSpec.describe Question, type: :model do
     expect(questionCreate.errors[:resources]).to be_empty
   end
 
-  #Presence validation testing
+  #Test for presence 
+  it "must have a title" do
+    expect(questionCreate.errors[:title]).to_not be_empty
+  end
+
   it "must have content" do
     expect(questionCreate.errors[:content]).to_not be_empty
   end

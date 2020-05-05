@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_05_211438) do
+ActiveRecord::Schema.define(version: 2020_05_05_231852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 2020_05_05_211438) do
 
   create_table "lessons", force: :cascade do |t|
     t.text "content"
-    t.string "question"
     t.boolean "completed"
     t.integer "code_module_id"
     t.datetime "created_at", precision: 6, null: false
@@ -47,6 +46,7 @@ ActiveRecord::Schema.define(version: 2020_05_05_211438) do
     t.integer "code_module_id"
     t.boolean "multiple_choice"
     t.text "img_src"
+    t.string "title"
   end
 
   create_table "resources", force: :cascade do |t|
