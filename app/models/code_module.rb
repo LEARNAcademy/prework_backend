@@ -1,8 +1,8 @@
 class CodeModule < ApplicationRecord
     #Relational belongs_to and has_many.
     belongs_to :user
+    belongs_to :topic
     has_many :lessons
-    has_many :topics
     has_many :questions, through: :lessons
     
     #Validations for presence below.
