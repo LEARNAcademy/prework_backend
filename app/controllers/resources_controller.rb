@@ -18,7 +18,7 @@ class ResourcesController < ApplicationController
             if resource.valid?
                 render json: resource
             else
-                render json: codeModule.errors, status: :unprocessable_entity
+                render json: resource.errors, status: :unprocessable_entity
             end
         else
             render status: 403, plain: 'Please Sign In to Access'
