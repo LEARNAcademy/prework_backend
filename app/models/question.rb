@@ -5,7 +5,7 @@ class Question < ApplicationRecord
     has_many :resources
 
     #Presence validations
-    validates :multiple_choice, :completed, :lesson_id, :code_module_id, presence: true 
+    validates :lesson_id, :code_module_id, presence: true 
 
     #Integer validation
     validates :lesson_id, numericality: true
