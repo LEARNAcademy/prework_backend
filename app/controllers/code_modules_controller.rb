@@ -66,7 +66,7 @@ class CodeModulesController < ApplicationController
     # Strong params below
     private
     def codeModule_params
-        params.require(:code_module).permit(:lesson, :progress, :completed, :user_id)
+        params.require(:code_module).permit(:lesson, :progress, :completed, :user_id, :topic_id)
     end
     
 end

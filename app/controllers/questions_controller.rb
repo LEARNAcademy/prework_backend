@@ -66,6 +66,6 @@ class QuestionsController < ApplicationController
     # Strong params below 
     private
     def question_params
-         params.require(:question).permit(:content, :answer, :correct, :completed, :lesson_id, :code_module_id)
+         params.require(:question).permit(:content, :answer, :correct, :completed, :lesson_id, :code_module_id, :multiple_choice, :img_src, :title)
     end
 end

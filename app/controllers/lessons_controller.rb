@@ -66,6 +66,6 @@ class LessonsController < ApplicationController
     # Strong params below 
     private
     def lesson_params
-         params.require(:lesson).permit(:content, :question, :completed, :title, :code_module_id)
+         params.require(:lesson).permit(:content, :completed, :title, :code_module_id, :img_src)
     end
 end
