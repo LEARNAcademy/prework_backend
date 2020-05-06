@@ -51,4 +51,4 @@ gem "devise", "~> 4.7"
 
 gem 'rack-cors', :require => 'rack/cors'
 
-gem 'devise_token_auth'
+gem 'simple_token_authentication', '~> 1.0'
