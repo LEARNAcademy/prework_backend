@@ -122,7 +122,7 @@ lessons = [{
 {
     # Lesson id 7
     title: 'Table Rows',
-    content: "xt we will need to tell the table how many rows we would like. We do this by nesting <tr> (table row) tags inside of the <table> tags. The table we hope to make will have three rows.
+    content: "Next we will need to tell the table how many rows we would like. We do this by nesting <tr> (table row) tags inside of the <table> tags. The table we hope to make will have three rows.
 
         <table>
           <tr></tr>
@@ -364,7 +364,7 @@ questions = [{
 {
     # Question id 4 (Quiz: The anatomy of a tag)
     multiple_choice: true,
-    title: 'Where is the opening tag?'
+    title: 'Where is the opening tag?',
     content: "'A', 'B', 'C'",
     answer: 'A',
     img_src: "https://camo.githubusercontent.com/3c835e90505422e327d1b6f8b69611da2adcb343/68747470733a2f2f692e6962622e636f2f477642624c33702f7175697a2e706e67",
