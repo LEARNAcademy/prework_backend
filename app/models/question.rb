@@ -5,13 +5,10 @@ class Question < ApplicationRecord
     has_many :resources
 
     #Presence validations
-    validates :content, :title, :answer, :correct, :completed, :lesson_id, :code_module_id, presence: true 
+    validates :multiple_choice, :completed, :lesson_id, :code_module_id, presence: true 
 
     #Integer validation
     validates :lesson_id, numericality: true
     validates :code_module_id, numericality: true
 
-    #Length of validations
-    validates :content, length: {minimum: 3} 
-    validates :answer, length: {minimum: 3} 
 end
