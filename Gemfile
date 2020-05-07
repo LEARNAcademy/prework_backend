@@ -49,6 +49,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "devise", "~> 4.7"
 
+# CORs
 gem 'rack-cors', :require => 'rack/cors'
 
+# Random token generator 
 gem 'simple_token_authentication', '~> 1.0'
+
+# JSON Web Token
+gem 'jwt'
