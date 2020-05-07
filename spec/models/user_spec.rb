@@ -13,6 +13,10 @@ RSpec.describe User, type: :model do
     expect(usercreate.errors[:encrypted_password]).to be_empty
   end
 
+  it "must have a last question completed" do
+    expect(usercreate.errors[:last_q]).to be_empty
+  end
+
   #Tests for password and creation
   it 'can be created' do
     user = User.create(email: "test@test.test", password: "asdfasdf", password_confirmation: "asdfasdf")

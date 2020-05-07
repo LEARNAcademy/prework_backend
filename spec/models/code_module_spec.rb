@@ -6,8 +6,6 @@ codemodule = CodeModule.create
 RSpec.describe CodeModule, type: :model do
 
   #Relational model tests
-  it { should belong_to(:user) }
-
   it { should belong_to(:topic) }
   
   it { should have_many(:lessons) }
@@ -23,16 +21,12 @@ RSpec.describe CodeModule, type: :model do
     expect(codemodule.errors[:completed]).to be_empty
   end
 
-  it "must have a user" do
-    expect(codemodule.errors[:user_id]).to_not be_empty
-  end
-
   it "must have a topic" do
     expect(codemodule.errors[:topic_id]).to_not be_empty
   end
 
   #Tests for integer
-  it{should validate_numericality_of(:user_id)}
+  it{should validate_numericality_of(:topic_id)}
 
   #Tests for length of values
   it{should validate_length_of(:lesson).is_at_least(3)}
