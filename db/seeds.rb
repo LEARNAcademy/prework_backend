@@ -1,5 +1,7 @@
 topics = [{
     title: "HTML"
+}, {
+    title: "CSS"
 }]
 # Creates Topic for seed file
 topics.each do |v|
@@ -26,8 +28,10 @@ lessons.each do |v|
 end
 
 questions = [{
-    title: "Render your first h1",
-    multiple_choice: false,
+    title: "What is the answer to this?",
+    multiple_choice: true,
+    content:'answer 1 ans:&* answer 2 ans:&* answer 3 ans:&* answer 4',
+    answer:'answer 2',
     completed: false,
     lesson_id: 1,
     code_module_id: 1
