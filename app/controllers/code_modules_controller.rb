@@ -14,15 +14,16 @@ class CodeModulesController < ApplicationController
     def create
         # Making sure only signed in users can access
         # if user_signed_in?
+        if current_user.admin?
             codeModule = CodeModule.create(codeModule_params)
             if codeModule.valid?
                 render json: codeModule
             else
                 render json: codeModule.errors, status: :unprocessable_entity
             end
-        # else
-        #     render status: 403, plain: 'Please Sign In to Access'
-        # end
+        else
+            render status: 403, plain: 'Please Sign In to Access'
+        end
     end
     # Method to show just 1 CodeModule
     def show
