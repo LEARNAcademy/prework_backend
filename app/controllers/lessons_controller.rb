@@ -57,7 +57,7 @@ class LessonsController < ApplicationController
             if lesson.destroy
                 render json: lesson
             else
-                render json: leeson.errors
+                render json: leson.errors
             end
         # else
         #     render status: 403, plain: 'Please Sign In to Access'
