@@ -52,8 +52,5 @@ gem "devise", "~> 4.7"
 # CORs
 gem 'rack-cors', :require => 'rack/cors'
 
-# Random token generator 
-gem 'simple_token_authentication', '~> 1.0'
-
-# JSON Web Token
-gem 'jwt'
+# Devise JWT
+gem 'devise-jwt', '~> 0.6.0'
