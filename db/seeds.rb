@@ -16,18 +16,15 @@ end
 codemodules = [{
     # Code module id 1
     lesson: 'Intro to HTML Elements & Structure',
-    completed: false,
     topic_id: 1
 },{
     # Code module id 2
     lesson: 'Tables',
-    completed: false,
     topic_id: 1
 },{
     # Code module id 3
-    lesson: 'Intro to Javascript',
-    completed: false,
-    topic_id: 3
+    lesson: 'Lists',
+    topic_id: 1
 }]
 codemodules.each do |v|
     CodeModule.create v
@@ -37,7 +34,6 @@ lessons = [{
     # Lesson id 1
     title: 'History of HTML',
     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    completed: false,
     code_module_id: 1
 },{
     # Lesson id 2
@@ -45,7 +41,6 @@ lessons = [{
     content: "HTML tags are the hidden keywords within a web page that define how your web browser must format and display the content. HTML tags typically fall into the following format: image below 
     
     There are hundreds of tags in HTML! You can look to MDN (Mozilla Developer Network) ar W3 Schools to see all of the tags available. Don't feel obligated by any means to memorize these. There are a few that you will use often (div, h1, p, etc.) and some that you will likely never use! At this point, just get familiar with the anatomy of a typical HTML tag.",
-    completed: false,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/391be322ebc71fef013423d9b4ff55812e79f2ba/68747470733a2f2f692e6962622e636f2f363878664679422f53637265656e2d53686f742d323032302d30342d30362d61742d31302d35342d30392d414d2e706e67"
 },{
@@ -54,7 +49,6 @@ lessons = [{
     content: "In your text editor (Atom of VS Code), if you type HTML and hit tab, the text editor will generate an HTML boiler plate. Let's break down what it is you're looking at in the boiler plate: image below 
     
     It is important to understand what each tag in the boiler plate is responsible for! But for now, we will be working inside of the body tag.",
-    completed: false,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/6c03627339b71f371fadd857e3858af7759fca24/68747470733a2f2f692e6962622e636f2f486759685733682f53637265656e2d53686f742d323032302d30342d30362d61742d31312d34362d32392d414d2e706e67"
 },{
@@ -74,39 +68,46 @@ lessons = [{
     
     <p style='color:blue'>I'm blue da ba dee da ba daa</p>
     To recap, in all of our examples, the attribute is modifying the HTML element in some way.",
-    completed: false,
     code_module_id: 1
 },{
     # Lesson id 5
-    title: "Let's use a <table> tag to build the table below!",
-    content: "1. First, we will need to code opening and closing <table> tags.",
-    completed: false,
+    title: "Introduction To Tables",
+    content: "Let's use a <table> tag to build the table below!",
     code_module_id: 2,
     img_src: "https://camo.githubusercontent.com/7e2f94fe63c11541611feaca0ad881ac2bf6aecc/68747470733a2f2f692e6962622e636f2f3934366b6431482f53637265656e2d53686f742d323032302d30342d30382d61742d31302d32352d31372d414d2e706e67" 
 },{
-    title: 'History of CSS 2',
-    content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    completed: false,
-    code_module_id: 2
+    # Lesson id 6
+    title: 'Introduction To Lists',
+    content: "Let's talk about listing items! In HTML, there are two ways to write a list.
+
+    There can be ordered (numbered) lists:
+        How to do laundry:
+            1. Separate laundry by color
+            2. Put laundry in machine
+            3. Add soap
+            4. Adjust setting and hit 'start'
+
+    Or unordered (bullet-point) lists:
+        Laundry supplies:
+            - Detergent
+            - Fabric Softner
+            - Dryer sheets",
+    code_module_id: 3
 },{
     title: 'History of CSS 3',
     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    completed: false,
     code_module_id: 2
 },{
     title: 'History of Javascript',
     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    completed: false,
     code_module_id: 3
 },{
     title: 'History of Javascript 2',
     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    completed: false,
     code_module_id: 3
 },{
     title: 'History of Javascript 3',
     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    completed: false,
     code_module_id: 3
 }]
 lessons.each do |v|
@@ -119,7 +120,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer 1*/Answer 2*/Answer 3*/Answer 4',
     answer:'Answer 2',
-    completed: false,
     lesson_id: 1,
     code_module_id: 1
 },{
@@ -128,7 +128,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer A*/Answer B*/Answer C',
     answer:'Answer A',
-    completed: false,
     lesson_id: 2,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/3c835e90505422e327d1b6f8b69611da2adcb343/68747470733a2f2f692e6962622e636f2f477642624c33702f7175697a2e706e67"
@@ -138,7 +137,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer A*/Answer B*/Answer C',
     answer:'Answer C',
-    completed: false,
     lesson_id: 2,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/3c835e90505422e327d1b6f8b69611da2adcb343/68747470733a2f2f692e6962622e636f2f477642624c33702f7175697a2e706e67"
@@ -148,7 +146,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer A*/Answer B*/Answer C*/Answer A and C',
     answer:'Answer A and C',
-    completed: false,
     lesson_id: 2,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/3c835e90505422e327d1b6f8b69611da2adcb343/68747470733a2f2f692e6962622e636f2f477642624c33702f7175697a2e706e67"
@@ -158,7 +155,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer A*/Answer B*/Answer C',
     answer:'Answer B',
-    completed: false,
     lesson_id: 2,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/3c835e90505422e327d1b6f8b69611da2adcb343/68747470733a2f2f692e6962622e636f2f477642624c33702f7175697a2e706e67"
@@ -168,7 +164,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer A*/Answer B*/Answer C*/Answer D',
     answer:'Answer D',
-    completed: false,
     lesson_id: 3,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/3eaa36c6a4e9c8f51729cf3a82d8a7abafc05623/68747470733a2f2f692e6962622e636f2f434237365678432f53637265656e2d53686f742d323032302d30342d30372d61742d31302d33372d30382d414d2e706e67"
@@ -178,7 +173,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer A*/Answer B*/Answer C*/Answer D',
     answer:'Answer A',
-    completed: false,
     lesson_id: 3,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/3eaa36c6a4e9c8f51729cf3a82d8a7abafc05623/68747470733a2f2f692e6962622e636f2f434237365678432f53637265656e2d53686f742d323032302d30342d30372d61742d31302d33372d30382d414d2e706e67"
@@ -188,7 +182,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer A*/Answer B*/Answer C*/Answer D',
     answer:'Answer C',
-    completed: false,
     lesson_id: 3,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/3eaa36c6a4e9c8f51729cf3a82d8a7abafc05623/68747470733a2f2f692e6962622e636f2f434237365678432f53637265656e2d53686f742d323032302d30342d30372d61742d31302d33372d30382d414d2e706e67"
@@ -198,7 +191,6 @@ questions = [{
     multiple_choice: true,
     content:'Answer A*/Answer B*/Answer C*/Answer D',
     answer:'Answer B',
-    completed: false,
     lesson_id: 3,
     code_module_id: 1,
     img_src: "https://camo.githubusercontent.com/3eaa36c6a4e9c8f51729cf3a82d8a7abafc05623/68747470733a2f2f692e6962622e636f2f434237365678432f53637265656e2d53686f742d323032302d30342d30372d61742d31302d33372d30382d414d2e706e67"
@@ -208,31 +200,133 @@ questions = [{
     multiple_choice: true,
     content:'Create your first link! Write code that will link a user to the wikipedia site for Cholula hot sauce*/Answer 2',
     answer:'Answer 2',
-    completed: false,
     lesson_id: 4,
     code_module_id: 1
 },{
-    title: "Question belongs to lesson id 5",
+    # IDE Question id 11
+    title: "Practice with attributes Part 2",
     multiple_choice: true,
-    content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
-    answer:'answer 2',
-    completed: false,
+    content:'Change the font colors below. First paragraph yellow, second paragraph blue, third paragraph red.
+    
+    <p>Yellow is a star, yellow is the sun, yellow is the moon when the day is done</p>
+
+    <p>Blue is the ocean, blue is the sky, blue is the berries i put in my pie</p>
+
+    <p>Red is an apple, red is a cherry, red is a rose, and a ripe strawberry</p>*/Answer 2',
+    answer:'Answer 2',
+    lesson_id: 4,
+    code_module_id: 1
+},{
+    # IDE Question id 12
+    title: "Introduction To Tables",
+    multiple_choice: true,
+    content:'First, we will need to code opening and closing <table> tags.
+
+    <table>
+    </table>
+    
+    Next we will need to tell the table how many rows we would like. We do this by nesting <tr> (table row) tags inside of the <table> tags. The table we hope to make will have three rows.
+
+        <table>
+          <tr></tr>
+          <tr></tr> 
+          <tr></tr>
+        </table>*/Answer 2',
+    answer:'Answer 2',
     lesson_id: 5,
     code_module_id: 2
 },{
-    title: "Question belongs to lesson id 6",
+    # IDE Question id 13
+    title: "Introduction To Table Nesting And Cells",
     multiple_choice: true,
-    content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
-    answer:'answer 2',
-    completed: false,
-    lesson_id: 6,
+    content:"Now we need to tell the table how many columns we will need. We do this by nesting <td> (table data) tags inside of the <tr> tags. Each <td> tag represents a cell in the row. We know we want the table to be three cells wide. First things first though, we need to stay organized since our table is getting more complicated! We are going to drop all of the closing </tr> tags down to a new line before adding in our <td>'s. This will make it very clear to us where exactly each row ends.
+        <table>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr> 
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        Look how clean that is! Each nested section is indented a single tab over and we can clearly see where all of our elements begin and end!*/Answer 2",
+    answer:'Answer 2',
+    lesson_id: 5,
     code_module_id: 2
+},{
+    # IDE Question id 14
+    title: "Introduction To Adding Data Into A Table",
+    multiple_choice: true,
+    content:"We probably want our table to contain some data right? Let's drop some text inside of the cells in the table.
+    <table>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr> 
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+    
+    Lastly, we will want to add a border so that we can outline the table and all of it's cells. We do this by adding an attribute to the opening <table> tag.
+        <table border=1>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr> 
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+        </table>*/Answer 2",
+    answer:'Answer 2',
+    lesson_id: 5,
+    code_module_id: 2
+},{
+    # IDE Question id 15
+    title: "Great Work! Practice Coding Out The HTML Table",
+    multiple_choice: true,
+    content:"Code the table below. Hint! You will need to do a little bit of research on <th> instead of <td>:*/Answer 2",
+    answer:'Answer 2',
+    lesson_id: 5,
+    code_module_id: 2,
+    img_src: "https://camo.githubusercontent.com/408a38b72849652bae524ac29f7d743d016bae24/68747470733a2f2f692e6962622e636f2f746d306b644a642f53637265656e2d53686f742d323032302d30342d30382d61742d31302d34342d33312d414d2e706e67"
+},{
+    # IDE Question id 16
+    title: "Ordered List",
+    multiple_choice: true,
+    content:'*/Answer 2',
+    answer:'Answer 2',
+    lesson_id: 6,
+    code_module_id: 3
 },{
     title: "Question belongs to lesson id 7",
     multiple_choice: true,
     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
     answer:'answer 2',
-    completed: false,
     lesson_id: 7,
     code_module_id: 2
 },{
@@ -240,7 +334,6 @@ questions = [{
     multiple_choice: true,
     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
     answer:'answer 2',
-    completed: false,
     lesson_id: 8,
     code_module_id: 2
 },{
@@ -248,7 +341,6 @@ questions = [{
     multiple_choice: true,
     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
     answer:'answer 2',
-    completed: false,
     lesson_id: 9,
     code_module_id: 2
 }]
