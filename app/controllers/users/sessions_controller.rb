@@ -1,30 +1,23 @@
 # frozen_string_literal: true
-
 class Users::SessionsController < Devise::SessionsController
-  # before_action :configure_sign_in_params, only: [:create]
+  before_action :authenticate_user!
+  # Shows all Users
+  def index
+    users = User.all
+    render json: users
+  end
+  # Shows one User  
+  def show
+        user = User.find(params[:id])
+        render json: user
+  end
 
-  # GET /resource/sign_in
-  # def new
-  #   super
-  # end
-
-  # POST /resource/sign_in
-  
-  # def create
-  #   super
-  #   if current_user.admin?
-  #     User.create()
-  # end
-
-  # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
-
-  # protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_in_params
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-  # end
+  def destroy
+    user = User.find(params[:id])
+    if user.destroy
+        render json: user
+    else
+        render json: user.errors
+    end
+  end
 end
