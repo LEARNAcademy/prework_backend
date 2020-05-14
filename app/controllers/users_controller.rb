@@ -13,6 +13,11 @@ class UsersController < ApplicationController
     def update
         user = User.find(params[:id])
         user.update(user_params)
+    if user.valid?
+        render json: user
+    else
+        render json: user.errors, status: :unprocessable_entity
+    end
     end
 
     private
