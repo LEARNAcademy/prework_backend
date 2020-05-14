@@ -5,11 +5,11 @@ class UsersController < ApplicationController
 
     def show
     end
-
+    
     def edit
         user = current_user
     end
-
+#Allow user to update its last_q and last_l columns
     def update
         user = User.find(params[:id])
         user.update(user_params)
@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     end
     end
 
+    #Shh, secret. 
     private
     def user_params
         params.require(:user).permit(:id, :last_q, :last_l)
