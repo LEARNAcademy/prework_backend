@@ -1,4 +1,5 @@
-[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/issues/)
+[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/LEARNAcademy/prework_backend/issues)
+[![GitHub pull-requests closed](https://img.shields.io/github/issues-pr-closed/Naereen/StrapDown.js.svg)](https://github.com/LEARNAcademy/prework_backend/pull)
 
 # LEARN Prework Application Rails API
 LEARN Academy prework backend Rails API that attaches to the [LEARN Academy react frontend](https://github.com/LEARNAcademy/prework-frontend). 
