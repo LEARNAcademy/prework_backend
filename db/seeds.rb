@@ -1,3 +1,13 @@
+admin = [{
+    email: "admin@learn.com",
+    password: "testtest",
+    password_confirmation: "testtest",
+    admin: true
+}]
+admin.each do |v|
+    User.create v
+end
+
 topics = [{
     # Topic id 1
     title: "HTML"
@@ -117,7 +127,7 @@ end
 questions = [{
     # IDE Question id 1
     title: "Render your first h1!",
-    multiple_choice: true,
+    multiple_choice: false,
     content:'Answer 1*/Answer 2*/Answer 3*/Answer 4',
     answer:'Answer 2',
     lesson_id: 1,
