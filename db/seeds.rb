@@ -103,22 +103,22 @@ lessons = [{
             - Fabric Softner
             - Dryer sheets",
     code_module_id: 3
-},{
-    title: 'History of CSS 3',
-    content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    code_module_id: 2
-},{
-    title: 'History of Javascript',
-    content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    code_module_id: 3
-},{
-    title: 'History of Javascript 2',
-    content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    code_module_id: 3
-},{
-    title: 'History of Javascript 3',
-    content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-    code_module_id: 3
+# },{
+#     title: 'History of CSS 3',
+#     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
+#     code_module_id: 2
+# },{
+#     title: 'History of Javascript',
+#     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
+#     code_module_id: 3
+# },{
+#     title: 'History of Javascript 2',
+#     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
+#     code_module_id: 3
+# },{
+#     title: 'History of Javascript 3',
+#     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
+#     code_module_id: 3
 }]
 lessons.each do |v|
     Lesson.create v
@@ -328,31 +328,116 @@ questions = [{
     # IDE Question id 16
     title: "Ordered List",
     multiple_choice: true,
-    content:'*/Answer 2',
+    content:"Let's walk through the process. Say we want to create a seating list for a party at our restaurant. We have 2 tables, and we want to have 3 people at every table.
+
+    First, we know we want an ordered list for all of the tables. We start an ordered list with the <ol> tag:
+    <ol>
+    </ol>
+    Now we need to add the tables to our list. We create list items with the <li> tag.
+    <ol>
+      <li></li>
+      <li></li>
+    </ol>
+    At this point, our table has no data. We will want to add our table names:
+    <ol>
+      <li>Patio</li>
+      <li>Dining Room</li>
+    </ol>
+    Our list is starting to take shape!*/Answer 2",
     answer:'Answer 2',
     lesson_id: 6,
-    code_module_id: 3
+    code_module_id: 3,
+    img_src: "https://camo.githubusercontent.com/f50bc64e157588e4568b750de97cf1f598127b7a/68747470733a2f2f692e6962622e636f2f67746d5a3162322f53637265656e2d53686f742d323032302d30342d30392d61742d31302d34332d35382d414d2e706e67"
 },{
-    title: "Question belongs to lesson id 7",
+    # IDE Question id 17
+    title: "Unordered List",
     multiple_choice: true,
-    content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
-    answer:'answer 2',
-    lesson_id: 7,
-    code_module_id: 2
+    content:"Now it's time to assign guests to tables. We can do that by nesting a unordered lists inside of out ordered lists. We will start by dropping the closing </li> tags down to the next line to make room for our nested list. Like in the Tables Module, we want our code to be very organized and clean.
+        <ol>
+          <li>Patio
+          </li>
+          <li>Dining Room
+          </li>
+        </ol>
+        Between our opening and closing <li> tags, we are going to start new unordered lists. We already know that each table will have three guests. We can go ahead and add three <li>'s (list items) inside of each <ul> (unordered list):
+        <ol>
+        <ol>
+          <li>Patio
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+          <li>Dining Room
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+        </ol>
+        Looking good!*/Answer 2",
+    answer:'Answer 2',
+    lesson_id: 6,
+    code_module_id: 3,
+    img_src: "https://camo.githubusercontent.com/56953c64e651591f50f0fb446598ef6f254f0a9f/68747470733a2f2f692e6962622e636f2f307456717934582f53637265656e2d53686f742d323032302d30342d30392d61742d31302d35312d31362d414d2e706e67"
 },{
-    title: "Question belongs to lesson id 8",
+    # IDE Question id 18
+    title: "Final Nested List",
     multiple_choice: true,
-    content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
-    answer:'answer 2',
-    lesson_id: 8,
-    code_module_id: 2
+    content:"Finally, we can add the guests' names to each <li> within the <ul>'s:
+    <ol>
+      <li>Patio
+        <ul>
+          <li>Jose</li>
+          <li>Gina</li>
+          <li>Blanca</li>
+        </ul>
+      </li>
+      <li>Dining Room
+        <ul>
+          <li>Heather</li>
+          <li>Sean</li>
+          <li>Macy</li>
+        </ul>
+      </li>
+    </ol>
+    Woo! That's a good lookin' list!*/Answer 2",
+    answer:'Answer 2',
+    lesson_id: 6,
+    code_module_id: 3,
+    img_src: "https://camo.githubusercontent.com/3be7a620cab2e641428b54d2855b55794d64ae09/68747470733a2f2f692e6962622e636f2f376a76304672792f53637265656e2d53686f742d323032302d30342d30392d61742d31302d35332d32312d414d2e706e67"
 },{
-    title: "Question belongs to lesson id 9",
+    # IDE Question id 19
+    title: "List Challenge",
     multiple_choice: true,
-    content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
-    answer:'answer 2',
-    lesson_id: 9,
-    code_module_id: 2
+    content:"Create the code for a webpage that will display the following recipe for simple cookies:*/Answer 2",
+    answer:'Answer 2',
+    lesson_id: 6,
+    code_module_id: 3,
+    img_src: "https://camo.githubusercontent.com/e7168fe1ba3208860fc98e6f9bc4f427cc63f520/68747470733a2f2f692e6962622e636f2f4e724b764273502f53637265656e2d53686f742d323032302d30342d30392d61742d31312d31302d34362d414d2e706e67"
+# },{
+#     title: "Question belongs to lesson id 7",
+#     multiple_choice: true,
+#     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
+#     answer:'answer 2',
+#     lesson_id: 7,
+#     code_module_id: 2
+# },{
+#     title: "Question belongs to lesson id 8",
+#     multiple_choice: true,
+#     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
+#     answer:'answer 2',
+#     lesson_id: 8,
+#     code_module_id: 2
+# },{
+#     title: "Question belongs to lesson id 9",
+#     multiple_choice: true,
+#     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
+#     answer:'answer 2',
+#     lesson_id: 9,
+#     code_module_id: 2
 }]
 questions.each do |v|
     Question.create v
