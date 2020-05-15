@@ -13,11 +13,6 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def destroy
-    user = User.find(params[:id])
-    if user.destroy
-        render json: user
-    else
-        render json: user.errors
-    end
   end
+
 end
