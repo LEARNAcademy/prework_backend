@@ -13,10 +13,10 @@ topics = [{
     title: "HTML"
 }, {
     # Topic id 2
-    title: "CSS"
+    title: "JavaScript"
 }, {
     # Topic id 3
-    title: "Javascript"
+    title: "CSS"
 }]
 # Creates Topic for seed file
 topics.each do |v|
@@ -35,6 +35,30 @@ codemodules = [{
     # Code module id 3
     lesson: 'Lists',
     topic_id: 1
+},{
+    # Code module id 4
+    lesson: 'Intro to JavaScript',
+    topic_id: 2
+},{
+    # Code module id 5
+    lesson: 'Variables',
+    topic_id: 2
+},{
+    # Code module id 6
+    lesson: 'Conditionals',
+    topic_id: 2
+},{
+    # Code module id 7
+    lesson: 'Arrays',
+    topic_id: 2
+},{
+    # Code module id 8
+    lesson: 'For Loops',
+    topic_id: 2
+},{
+    # Code module id 9
+    lesson: 'Functions',
+    topic_id: 2
 }]
 codemodules.each do |v|
     CodeModule.create v
@@ -103,22 +127,152 @@ lessons = [{
             - Fabric Softner
             - Dryer sheets",
     code_module_id: 3
-# },{
-#     title: 'History of CSS 3',
-#     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-#     code_module_id: 2
-# },{
-#     title: 'History of Javascript',
-#     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-#     code_module_id: 3
-# },{
-#     title: 'History of Javascript 2',
-#     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-#     code_module_id: 3
-# },{
-#     title: 'History of Javascript 3',
-#     content: "Hyper Text Markup Language: structure and content of a page. Not the styling, not the functionality. Basically the skeleton. In the early days of the internet, there was no standardized way of sending information and documents. Internet was mostly used for communication between colleges and universities as well as the military. If I wanted any formatting to happen with my document, I needed to be able to break that down to smaller pieces. Thus, HTML was made to handle it around 1989/1990. Some headers, some things are bolded or important italicized, some bullet points, bigger and smaller text, etc Eventually moved onto more broad uses. Remember myspace? Probably used HTML/CSS to edit your page. Think of HTML as the skelton of your program!",
-#     code_module_id: 3
+},{
+    # Lesson id 7
+    title: 'What is JS?',
+    content: "JavaScript (often shortened to 'JS') is a powerful, flexible, and fast programming language. It was created in 1995 so it's old and well documented. Java and JavaScript are not the same language! JavaScript is most commonly used as a client side scripting language. This means that JavaScript code is written into an HTML page and when a user requests an HTML page with JavaScript in it, the script is sent to the browser (chrome) and it's up to the browser to do something with it. If HTML is the skeleton of a program, think of JavaScript as the muscular system! It gives your user something to interact with!",
+    code_module_id: 4
+},{
+    # Lesson id 8
+    title: 'Primitive Data Types',
+    content: "A data type is an attribute of data which tells the compiler or interpreter how the programmer intends to use the data. There are six primitive data types in JS:
+
+    Number
+    String
+    Boolean
+    Null
+    Undefined
+    Symbol
+
+    In this module, we will focus on number, string, and boolean.
+    
+    Numbers are exactly that! Numbers! JS numbers can be positive, negative, whole numbers, and floats (a number with fractional value such as 2.5).
+    We can perform basic math with numbers in JS
+    
+        Addition: 4 + 100
+        
+        Subtraction: 40 - 6
+        
+        Multiplication: 76 * 2
+        
+        Division: 9 / 3
+    
+    Strings are anything wrapped in quotation marks! All of the following examples are strings:
+    'Salt and Pepper Kettle Chips'
+    'True'
+    '100'
+
+    Booleans are the value of either true or false.",
+    code_module_id: 4
+},{
+    # Lesson id 9
+    title: 'Comparison Operators',
+    content: "Coding is going to require a lot of comparisons! We can compare values a couple different ways.
+
+    Equality operator: == or ===
+        
+        == converts the data values to the same data type before performing comparison through type coercion. This is an Abstrct Equality Comparison
+        === does not do any type coercion and returns true only if both values and types are identical. This is a Strict Equality Comparison. For example:
+    4 == 4        // true
+    7 == 4        // false
+    '4' == 4      // true
+    '4' === 4     // false
+    '4' !== 4     // true
+
+    Hey, what was that ! ?? The ! above is called a bang operator. The bang operator essentially says 'String 4 is not equal to number 4' which is true.",
+    code_module_id: 4
+},{
+    # Lesson id 10
+    title: 'Relational Operators',
+    content: "You can also compare values with Relational Operators: >, <, >=, <=
+
+        // greater than
+        2 > 0         // true
+        
+        // less than
+        4 < 8         // true
+        
+        // greater than or equal to
+        0 >= 2        // false
+        
+        // less than or equal to
+        -4 <= 0.8     // true",
+    code_module_id: 4
+},{
+    # Lesson id 11
+    title: 'Logical Operators',
+    content: "-And: &&, checks if both values meet a certain criteria
+    
+    -Or: ||, checks if at least one value meets a certain criteria
+    
+    -Not: ! (this should be familiar), negates the proceeding statement
+
+        // and
+        4 && 7 > 1          // true
+        11 && 12 < 6        //false
+        
+        // or
+        true  || false      // true
+        false || false      // false
+        
+        // not
+        !true               // false
+        !false              // true
+        true !== false       // true
+        true !== true        // false
+        !(true && false)    // true
+        !(true && false)    // true",
+    code_module_id: 4
+},{
+    # Lesson id 12
+    title: 'Introduction To Variables',
+    content: "JavaScript variables are containers for storing data values. They are re-usable and re-assignable in most cases. Think of a variable as a piece of Tupperware...
+
+    My Tupperware is labeled 'Lunch.' Yesterday, I decided to pack myself a sandwich",
+    code_module_id: 5,
+    img_src: "https://camo.githubusercontent.com/97a6394cf7831ce54a93bf9101dfe79ced55f6eb/68747470733a2f2f692e6962622e636f2f3130645a5347472f53637265656e2d53686f742d323032302d30342d30392d61742d352d33362d35312d504d2e706e67"
+},{
+    # Lesson id 13
+    title: 'Introduction To Variables PT 2',
+    content: "When 12 o'clock rolled around and I opened up my Tupperware, a sandwich was inside",
+    code_module_id: 5,
+    img_src: "https://camo.githubusercontent.com/3f8e76922a390251ae902a28d2fe66f33d461dc9/68747470733a2f2f692e6962622e636f2f785335717258312f53637265656e2d53686f742d323032302d30342d30392d61742d352d33362d35332d504d2e706e67"
+},{
+    # Lesson id 14
+    title: 'Introduction To Variables PT 3',
+    content: "Every time I opened up my lunch container throughout the day, I saw a sandwich. It did not change.
+
+    But today I decided I would like tacos for lunch instead of a sandwich. I used my same container labeled 'Lunch' and replaced its contents with tacos",
+    code_module_id: 5,
+    img_src: "https://camo.githubusercontent.com/759bd66d1409f3756aef64eccc7c8717a6eba8e1/68747470733a2f2f692e6962622e636f2f3644514d4a78422f53637265656e2d53686f742d323032302d30342d30392d61742d352d33362d35392d504d2e706e67"
+},{
+    # Lesson id 15
+    title: 'Introduction To Variables PT 4',
+    content: "Once again, it's lunchtime. I opened my lunch container to find tacos. There was no need for me to create more dishes and start a new lunch container. I reused the orignial one! I successfully re-assigned my variable!",
+    code_module_id: 5,
+    img_src: "https://camo.githubusercontent.com/66b28fbcf96cad8b6e8793e337523e69d141a8ea/68747470733a2f2f692e6962622e636f2f5732774e766d712f53637265656e2d53686f742d323032302d30342d30392d61742d352d33372d30302d504d2e706e67"
+},{
+    # Lesson id 15
+    title: 'Introduction To Variables PT 5',
+    content: "Let's look at what this looks like in code:
+
+        var lunch = 'sandwich'    // assign a variable using the (keyword 'var') + (the name of your variable) + (a single =) + (data)
+        
+        lunch                     // 'sandwich'
+        lunch                     // 'sandwich'
+        lunch                     // 'sandwich'
+        
+        lunch = 'taco'            // reassign variable data with (the name of your variable) + (a single =) + (data)
+        
+        lunch                     // 'taco'
+
+    So far we have covered == and === for comparing data. But a single = assigns value. Also, variable names are lowercase!",
+    code_module_id: 5
+},{
+    # Lesson id 16
+    title: 'Introduction To Conditionals',
+    content: "",
+    code_module_id: 6
 }]
 lessons.each do |v|
     Lesson.create v
@@ -417,27 +571,71 @@ questions = [{
     lesson_id: 6,
     code_module_id: 3,
     img_src: "https://camo.githubusercontent.com/e7168fe1ba3208860fc98e6f9bc4f427cc63f520/68747470733a2f2f692e6962622e636f2f4e724b764273502f53637265656e2d53686f742d323032302d30342d30392d61742d31312d31302d34362d414d2e706e67"
-# },{
-#     title: "Question belongs to lesson id 7",
-#     multiple_choice: true,
-#     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
-#     answer:'answer 2',
-#     lesson_id: 7,
-#     code_module_id: 2
-# },{
-#     title: "Question belongs to lesson id 8",
-#     multiple_choice: true,
-#     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
-#     answer:'answer 2',
-#     lesson_id: 8,
-#     code_module_id: 2
-# },{
-#     title: "Question belongs to lesson id 9",
-#     multiple_choice: true,
-#     content:'answer 1ans:&*answer 2ans:&*answer 3ans:&*answer 4',
-#     answer:'answer 2',
-#     lesson_id: 9,
-#     code_module_id: 2
+},{
+    # IDE Question id 20
+    title: "JS Math!",
+    multiple_choice: true,
+    content:"Practice with this arithmetic:
+
+    Multiply 77 times 38 --> 2926
+    Add 6.7 and -40 --> -33.3
+    Subtract 2 from 21 --> 19
+    Divide 99 by 3 --> 33*/Answer 2",
+    answer:'Answer 2',
+    lesson_id: 8,
+    code_module_id: 4
+},{
+    # Question id 21
+    title: "Quiz! Which One Assigns value?",
+    multiple_choice: true,
+    content:"Answer: =*/Answer: ==*/Answer: ===",
+    answer:'Answer: =',
+    lesson_id: 9,
+    code_module_id: 4
+},{
+    # Question id 22
+    title: "Quiz! Which One Is Strict Equality Comparison?",
+    multiple_choice: true,
+    content:"Answer: =*/Answer: ==*/Answer: ===",
+    answer:'Answer: ===',
+    lesson_id: 9,
+    code_module_id: 4
+},{
+    # Question id 23
+    title: "Quiz! Which One Is Abstract Equality Comparison?",
+    multiple_choice: true,
+    content:"Answer: =*/Answer: ==*/Answer: ===",
+    answer:'Answer: ==',
+    lesson_id: 9,
+    code_module_id: 4
+},{
+    # IDE Question id 24
+    title: "Variable Practice",
+    multiple_choice: true,
+    content:"1.Set a variable called myDog to equal Bolt
+
+    2.Set another variable to myCat to equal Duchess
+
+    3.Set another variable to myFish to equal Bubbles
+
+    4.Call myDog, myCat, and myFish*/Answer: ===",
+    answer:'Answer: ===',
+    lesson_id: 15,
+    code_module_id: 5
+},{
+    # IDE Question id 25
+    title: "Variable Practice",
+    multiple_choice: true,
+    content:"1.Set a variable called myDog to equal Bolt
+
+    2.Set another variable to myCat to equal Duchess
+
+    3.Set another variable to myFish to equal Bubbles
+
+    4.Call myDog, myCat, and myFish*/Answer: ===",
+    answer:'Answer: ===',
+    lesson_id: 15,
+    code_module_id: 5
 }]
 questions.each do |v|
     Question.create v
