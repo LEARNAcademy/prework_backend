@@ -1,6 +1,3 @@
-[![GitHub issues](https://img.shields.io/github/issues/Naereen/StrapDown.js.svg)](https://github.com/LEARNAcademy/prework_backend/issues)
-[![GitHub pull-requests closed](https://img.shields.io/github/issues-pr-closed/Naereen/StrapDown.js.svg)](https://github.com/LEARNAcademy/prework_backend/pull)
-
 # LEARN Prework Application Rails API
 LEARN Academy prework backend Rails API that attaches to the [LEARN Academy react frontend](https://github.com/LEARNAcademy/prework-frontend). 
 This API handles all of the content management and delivery. It also handles the admin and user tracking via [Devise](https://github.com/heartcombo/devise).
@@ -149,3 +146,13 @@ rails g resource Question multiple_choice:boolean title:string content:text answ
 rails g resource Resource name:string link:text question_id:integer
 ```
 
+# Credits
+This application was created by Alpha 2020 full-stack developer students as their internship project with [LEARN Academy](https://www.learnacademy.org/)
+
+Alpha 2020 Developers
+- [Art Ortega](https://github.com/art-ortega)
+- [Tsz Li](https://github.com/bli013)
+- [Andee Isaacs](https://github.com/alyxender)
+
+Mentor
+- [Harrison Shaen](https://github.com/hschaen)
