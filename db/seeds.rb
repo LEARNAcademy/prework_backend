@@ -283,7 +283,7 @@ questions = [{
     title: "Render your first h1!",
     multiple_choice: false,
     content:'Answer 1*/Answer 2*/Answer 3*/Answer 4',
-    answer:'Answer 2',
+    answer:'<h1></h1>',
     lesson_id: 1,
     code_module_id: 1
 },{
