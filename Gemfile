@@ -54,3 +54,6 @@ gem 'rack-cors', :require => 'rack/cors'
 
 # Devise JWT
 gem 'devise-jwt', '~> 0.6.0'
+
+# Devise env file creation for mailers
+gem 'dotenv-rails'
