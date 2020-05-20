@@ -61,5 +61,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   #Setting the host for the default host. 
-  config.action_mailer.default_url_options = { :host => 'localhost' } 
+  config.action_mailer.default_url_options = { :host => 'https://learn-prework-backend.herokuapp.com/' } 
 end
