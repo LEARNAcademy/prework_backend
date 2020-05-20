@@ -80,7 +80,7 @@ lessons = [{
 },{
     # Lesson id 3
     title: 'HTML Boiler Plate',
-    content: "In your text editor (Atom of VS Code), if you type HTML and hit tab, the text editor will generate an HTML boiler plate. Let's break down what it is you're looking at in the boiler plate: image below 
+    content: "In your text editor (Atom or VS Code), if you type HTML and hit tab, the text editor will generate a HTML boiler plate. Let's break down what it is you're looking at in the boiler plate: image below 
     
     It is important to understand what each tag in the boiler plate is responsible for! But for now, we will be working inside of the body tag.",
     code_module_id: 1,
@@ -282,7 +282,8 @@ questions = [{
     # IDE Question id 1
     title: "Render your first h1!",
     multiple_choice: false,
-    content:'Answer 1*/Answer 2*/Answer 3*/Answer 4',
+    content:'HTML:
+    <h1> Hello world! </h1>',
     answer:'<h1></h1>',
     lesson_id: 1,
     code_module_id: 1
@@ -361,29 +362,32 @@ questions = [{
 },{
     # IDE Question id 10
     title: "Practice with attributes",
-    multiple_choice: true,
-    content:'Create your first link! Write code that will link a user to the wikipedia site for Cholula hot sauce*/Answer 2',
-    answer:'Answer 2',
+    multiple_choice: false,
+    content:"Create your first link! Write code that will link a user to the wikipedia site for Cholula hot sauce.
+    Use this wepage: https://en.wikipedia.org/wiki/Cholula_Hot_Sauce and make the text render: Cholula",
+    answer:"<a href='https://en.wikipedia.org/wiki/Cholula_Hot_Sauce'></a>",
     lesson_id: 4,
     code_module_id: 1
 },{
     # IDE Question id 11
     title: "Practice with attributes Part 2",
-    multiple_choice: true,
-    content:'Change the font colors below. First paragraph yellow, second paragraph blue, third paragraph red.
+    multiple_choice: false,
+    content:"Change the font colors below. First paragraph yellow, second paragraph blue, third paragraph red.
     
     <p>Yellow is a star, yellow is the sun, yellow is the moon when the day is done</p>
 
     <p>Blue is the ocean, blue is the sky, blue is the berries i put in my pie</p>
 
-    <p>Red is an apple, red is a cherry, red is a rose, and a ripe strawberry</p>*/Answer 2',
-    answer:'Answer 2',
+    <p>Red is an apple, red is a cherry, red is a rose, and a ripe strawberry</p>",
+    answer:'<p style="color:yellow">Yellow is a star, yellow is the sun, yellow is the moon when the day is done</p>
+    <p style="color:blue">Blue is the ocean, blue is the sky, blue is the berries i put in my pie</p>
+    <p style="color:red">Red is an apple, red is a cherry, red is a rose, and a ripe strawberry</p>',
     lesson_id: 4,
     code_module_id: 1
 },{
     # IDE Question id 12
     title: "Introduction To Tables",
-    multiple_choice: true,
+    multiple_choice: false,
     content:'First, we will need to code opening and closing <table> tags.
 
     <table>
@@ -395,14 +399,14 @@ questions = [{
           <tr></tr>
           <tr></tr> 
           <tr></tr>
-        </table>*/Answer 2',
-    answer:'Answer 2',
+        </table>',
+    answer:'<table><tr></tr><tr></tr><tr></tr></table>',
     lesson_id: 5,
     code_module_id: 2
 },{
     # IDE Question id 13
     title: "Introduction To Table Nesting And Cells",
-    multiple_choice: true,
+    multiple_choice: false,
     content:"Now we need to tell the table how many columns we will need. We do this by nesting <td> (table data) tags inside of the <tr> tags. Each <td> tag represents a cell in the row. We know we want the table to be three cells wide. First things first though, we need to stay organized since our table is getting more complicated! We are going to drop all of the closing </tr> tags down to a new line before adding in our <td>'s. This will make it very clear to us where exactly each row ends.
         <table>
           <tr>
@@ -421,14 +425,14 @@ questions = [{
             <td></td>
           </tr>
         </table>
-        Look how clean that is! Each nested section is indented a single tab over and we can clearly see where all of our elements begin and end!*/Answer 2",
-    answer:'Answer 2',
+        Look how clean that is! Each nested section is indented a single tab over and we can clearly see where all of our elements begin and end!",
+    answer:'<table><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table>',
     lesson_id: 5,
     code_module_id: 2
 },{
     # IDE Question id 14
     title: "Introduction To Adding Data Into A Table",
-    multiple_choice: true,
+    multiple_choice: false,
     content:"We probably want our table to contain some data right? Let's drop some text inside of the cells in the table.
     <table>
       <tr>
@@ -465,16 +469,16 @@ questions = [{
             <td>8</td>
             <td>9</td>
           </tr>
-        </table>*/Answer 2",
-    answer:'Answer 2',
+        </table>",
+    answer:'<table border=1><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table>',
     lesson_id: 5,
     code_module_id: 2
 },{
     # IDE Question id 15
     title: "Great Work! Practice Coding Out The HTML Table",
-    multiple_choice: true,
-    content:"Code the table below. Hint! You will need to do a little bit of research on <th> instead of <td>:*/Answer 2",
-    answer:'Answer 2',
+    multiple_choice: false,
+    content:"Code the table below. Hint! You will need to do a little bit of research on <th> instead of <td>:",
+    answer:'<table border=1><tr><th></th><th></th><th></th></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table>',
     lesson_id: 5,
     code_module_id: 2,
     img_src: "https://camo.githubusercontent.com/408a38b72849652bae524ac29f7d743d016bae24/68747470733a2f2f692e6962622e636f2f746d306b644a642f53637265656e2d53686f742d323032302d30342d30382d61742d31302d34342d33312d414d2e706e67"
@@ -497,15 +501,15 @@ questions = [{
       <li>Patio</li>
       <li>Dining Room</li>
     </ol>
-    Our list is starting to take shape!*/Answer 2",
-    answer:'Answer 2',
+    Our list is starting to take shape!",
+    answer:'<ol><li></li><li></li></ol>',
     lesson_id: 6,
     code_module_id: 3,
     img_src: "https://camo.githubusercontent.com/f50bc64e157588e4568b750de97cf1f598127b7a/68747470733a2f2f692e6962622e636f2f67746d5a3162322f53637265656e2d53686f742d323032302d30342d30392d61742d31302d34332d35382d414d2e706e67"
 },{
     # IDE Question id 17
     title: "Unordered List",
-    multiple_choice: true,
+    multiple_choice: false,
     content:"Now it's time to assign guests to tables. We can do that by nesting a unordered lists inside of out ordered lists. We will start by dropping the closing </li> tags down to the next line to make room for our nested list. Like in the Tables Module, we want our code to be very organized and clean.
         <ol>
           <li>Patio
@@ -514,7 +518,7 @@ questions = [{
           </li>
         </ol>
         Between our opening and closing <li> tags, we are going to start new unordered lists. We already know that each table will have three guests. We can go ahead and add three <li>'s (list items) inside of each <ul> (unordered list):
-        <ol>
+
         <ol>
           <li>Patio
             <ul>
@@ -531,8 +535,9 @@ questions = [{
             </ul>
           </li>
         </ol>
-        Looking good!*/Answer 2",
-    answer:'Answer 2',
+
+        Looking good!",
+    answer:'<ol><li><ul><li></li><li></li><li></li></ul></li><li><ul><li></li><li></li><li></li></ul></li></ol>',
     lesson_id: 6,
     code_module_id: 3,
     img_src: "https://camo.githubusercontent.com/56953c64e651591f50f0fb446598ef6f254f0a9f/68747470733a2f2f692e6962622e636f2f307456717934582f53637265656e2d53686f742d323032302d30342d30392d61742d31302d35312d31362d414d2e706e67"
@@ -661,6 +666,10 @@ resources = [{
     name: 'MDN HTML Tags',
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element",
     question_id: 5
+},{
+    name: 'MDN HTML Tags',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element",
+    question_id: 10
 }]
 resources.each do |v|
     Resource.create v
