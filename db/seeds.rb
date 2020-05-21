@@ -364,7 +364,7 @@ questions = [{
     title: "Practice with attributes",
     multiple_choice: false,
     content:"Create your first link! Write code that will link a user to the wikipedia site for Cholula hot sauce.
-    Use this wepage: https://en.wikipedia.org/wiki/Cholula_Hot_Sauce and make the text render: Cholula",
+    Use this wepage: https://en.wikipedia.org/wiki/Cholula_Hot_Sauce and make the text render: This is hotsauce! ",
     answer:"<a href='https://en.wikipedia.org/wiki/Cholula_Hot_Sauce'></a>",
     lesson_id: 4,
     code_module_id: 1
@@ -373,15 +373,14 @@ questions = [{
     title: "Practice with attributes Part 2",
     multiple_choice: false,
     content:"Change the font colors below. First paragraph yellow, second paragraph blue, third paragraph red.
+    ** Use: color:yellow | color:blue | color:red | 
     
     <p>Yellow is a star, yellow is the sun, yellow is the moon when the day is done</p>
 
     <p>Blue is the ocean, blue is the sky, blue is the berries i put in my pie</p>
 
     <p>Red is an apple, red is a cherry, red is a rose, and a ripe strawberry</p>",
-    answer:'<p style="color:yellow">Yellow is a star, yellow is the sun, yellow is the moon when the day is done</p>
-    <p style="color:blue">Blue is the ocean, blue is the sky, blue is the berries i put in my pie</p>
-    <p style="color:red">Red is an apple, red is a cherry, red is a rose, and a ripe strawberry</p>',
+    answer:'<p style="color:yellow"></p><p style="color:blue"></p><p style="color:red"></p>',
     lesson_id: 4,
     code_module_id: 1
 },{
@@ -577,6 +576,7 @@ questions = [{
     code_module_id: 3,
     img_src: "https://camo.githubusercontent.com/e7168fe1ba3208860fc98e6f9bc4f427cc63f520/68747470733a2f2f692e6962622e636f2f4e724b764273502f53637265656e2d53686f742d323032302d30342d30392d61742d31312d31302d34362d414d2e706e67"
 },{
+    # -------------------------START OF JS QUESTIONS--------------------------
     # IDE Question id 20
     title: "JS Math!",
     multiple_choice: true,
