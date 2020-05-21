@@ -364,7 +364,7 @@ questions = [{
     title: "Practice with attributes",
     multiple_choice: false,
     content:"Create your first link! Write code that will link a user to the wikipedia site for Cholula hot sauce.
-    Use this wepage: https://en.wikipedia.org/wiki/Cholula_Hot_Sauce and make the text render: Cholula",
+    Use this wepage: https://en.wikipedia.org/wiki/Cholula_Hot_Sauce and make the text render: This is hotsauce! ",
     answer:"<a href='https://en.wikipedia.org/wiki/Cholula_Hot_Sauce'></a>",
     lesson_id: 4,
     code_module_id: 1
@@ -373,15 +373,14 @@ questions = [{
     title: "Practice with attributes Part 2",
     multiple_choice: false,
     content:"Change the font colors below. First paragraph yellow, second paragraph blue, third paragraph red.
+    ** Use: color:yellow | color:blue | color:red | 
     
     <p>Yellow is a star, yellow is the sun, yellow is the moon when the day is done</p>
 
     <p>Blue is the ocean, blue is the sky, blue is the berries i put in my pie</p>
 
     <p>Red is an apple, red is a cherry, red is a rose, and a ripe strawberry</p>",
-    answer:'<p style="color:yellow">Yellow is a star, yellow is the sun, yellow is the moon when the day is done</p>
-    <p style="color:blue">Blue is the ocean, blue is the sky, blue is the berries i put in my pie</p>
-    <p style="color:red">Red is an apple, red is a cherry, red is a rose, and a ripe strawberry</p>',
+    answer:'<p style="color:yellow"></p><p style="color:blue"></p><p style="color:red"></p>',
     lesson_id: 4,
     code_module_id: 1
 },{
@@ -485,7 +484,7 @@ questions = [{
 },{
     # IDE Question id 16
     title: "Ordered List",
-    multiple_choice: true,
+    multiple_choice: false,
     content:"Let's walk through the process. Say we want to create a seating list for a party at our restaurant. We have 2 tables, and we want to have 3 people at every table.
 
     First, we know we want an ordered list for all of the tables. We start an ordered list with the <ol> tag:
@@ -544,7 +543,7 @@ questions = [{
 },{
     # IDE Question id 18
     title: "Final Nested List",
-    multiple_choice: true,
+    multiple_choice: false,
     content:"Finally, we can add the guests' names to each <li> within the <ul>'s:
     <ol>
       <li>Patio
@@ -562,21 +561,22 @@ questions = [{
         </ul>
       </li>
     </ol>
-    Woo! That's a good lookin' list!*/Answer 2",
-    answer:'Answer 2',
+    Woo! That's a good lookin' list!",
+    answer:'<ol><li><ul><li></li><li></li><li></li></ul></li><li><ul><li></li><li></li><li></li></ul></li></ol>',
     lesson_id: 6,
     code_module_id: 3,
     img_src: "https://camo.githubusercontent.com/3be7a620cab2e641428b54d2855b55794d64ae09/68747470733a2f2f692e6962622e636f2f376a76304672792f53637265656e2d53686f742d323032302d30342d30392d61742d31302d35332d32312d414d2e706e67"
 },{
     # IDE Question id 19
     title: "List Challenge",
-    multiple_choice: true,
-    content:"Create the code for a webpage that will display the following recipe for simple cookies:*/Answer 2",
-    answer:'Answer 2',
+    multiple_choice: false,
+    content:"Create the code for a webpage that will display the following recipe for simple cookies:",
+    answer:'<ul><li><ol><li></li><li></li><li></li><li></li></ol></li></ul>',
     lesson_id: 6,
     code_module_id: 3,
     img_src: "https://camo.githubusercontent.com/e7168fe1ba3208860fc98e6f9bc4f427cc63f520/68747470733a2f2f692e6962622e636f2f4e724b764273502f53637265656e2d53686f742d323032302d30342d30392d61742d31312d31302d34362d414d2e706e67"
 },{
+    # -------------------------START OF JS QUESTIONS--------------------------
     # IDE Question id 20
     title: "JS Math!",
     multiple_choice: true,
