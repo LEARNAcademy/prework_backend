@@ -112,7 +112,7 @@ Rails.application.configure do
 
   #Action mailer cofig specific to Heroku server
   config.action_mailer.default_url_options = { :host => 'learn-prework-backend.herokuapp.com' } 
-
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
