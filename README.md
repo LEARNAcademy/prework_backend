@@ -100,6 +100,13 @@ Below you can find what models, controllers and routes are built out and what so
   - name (string)
   - link (text)
   - question_id (integer)
+  
+  
+- hint
+  - title (text)
+  - content (text)
+  - resource (text)
+  - question_id (integer)
 
 ## Controllers
 
@@ -144,6 +151,10 @@ rails g resource Question multiple_choice:boolean title:string content:text answ
 
 ```
 rails g resource Resource name:string link:text question_id:integer
+```
+
+```
+rails g resource Hint title:text content:text resource:text question_id:integer
 ```
 
 # Credits
