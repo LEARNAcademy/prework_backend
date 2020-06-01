@@ -10,7 +10,7 @@ RSpec.describe CodeModule, type: :model do
   
   it { should have_many(:lessons) }
 
-  it { should have_many(:questions) }
+  it { should have_many(:questions).through(:lessons) }
 
   #Presence validation tests. 
   it "must have a lesson" do
